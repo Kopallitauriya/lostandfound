@@ -8,7 +8,7 @@ const Router = require('./routes/index.router');
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000', 'https://lostandfound-client.vercel.app'],
     credentials: true,
 }));
 
