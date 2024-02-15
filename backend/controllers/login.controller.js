@@ -15,6 +15,7 @@ const googleLogin = async (req, res) => {
   try {
     const code = req.body.tokenId;
     const resp = await getGoogleOAuthTokens(code);
+    console.log(resp);
     // eslint-disable-next-line camelcase
     const { id_token } = resp.data;
     const user = jwt.decode(id_token, { complete: false });
@@ -25,7 +26,7 @@ const googleLogin = async (req, res) => {
     user.registeredAt = user.iat;
 
     const person = await addUser(user);
-    const token = person.hallNumber ? await createTokenProfile(person) : await createToken(person);
+    const token = person?.hallNumber ? createTokenProfile(person) : createToken(person);
     const userData = decodeToken(token);
     userData.exp = new Date(Date.now() + 1800000);
     console.log(process.env.NODE_ENV === 'production');
