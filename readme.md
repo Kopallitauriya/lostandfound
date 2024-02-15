@@ -1,7 +1,11 @@
 # Deployment: https://lostandfound-client.vercel.app/
 
 # Lost and Found Website
- A website for the students of IIITDM Jabalpur to report and claim lost and found items.
+ A project initially started for the ease of college students of IIITDM Jabalpur to report and claim lost and found items, reducing thousands of spam emails on lostandfound email group.
+ This website has an intuitve and appealing interface.
+ Users can also communicate with each other if someone report an item that was reported lost by someone else, thus having one-on-one conversation instead of spamming everyone.
+
+ It also sends a newsletter at the end of day to inform about all lost and found items reported that day.
  
 
 ### Features
